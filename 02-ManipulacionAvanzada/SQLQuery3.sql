@@ -8,6 +8,9 @@ Funciones de agregado
 6.count(campo)
 */
 
+----TAMBIEN ESTA GROUP BY Y HAVING-----
+
+
 SELECT DISTINCT Country
 FROM Customers
 

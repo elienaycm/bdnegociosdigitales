@@ -1,4 +1,5 @@
 ```sql
+Consultas simples, con operadores relacionales, logicos, in, between, campos calculados, alias de columna, top, consultas con funciones de agregado sum, count(*), avg, max, min, count(campo), group by y having
 -- Limpieza (opcional)
 IF OBJECT_ID('dbo.Pagos','U') IS NOT NULL DROP TABLE dbo.Pagos;
 IF OBJECT_ID('dbo.DetalleVenta','U') IS NOT NULL DROP TABLE dbo.DetalleVenta;
