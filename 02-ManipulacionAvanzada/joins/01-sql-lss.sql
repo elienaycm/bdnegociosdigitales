@@ -1,4 +1,5 @@
-
+--Consultas simples
+--de aqui le sigue SQLQuery1.sql
 --Crea una base de datos
 CREATE DATABASE tienda;
 GO

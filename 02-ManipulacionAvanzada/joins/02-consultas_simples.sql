@@ -1,4 +1,5 @@
 --Consultas simples con AQL-LMD
+--esta es igual que 2.sql
 SELECT *
 FROM Categories;
 
@@ -197,7 +198,7 @@ SELECT
 FROM Customers;
 
 Select
-From Orde;
+From Order;
 
 --Operador IN
 /*

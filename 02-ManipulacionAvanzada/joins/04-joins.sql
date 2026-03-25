@@ -221,3 +221,48 @@ ON p.ProductID = pw.product_number
 
 SELECT*
 FROM products_new;
+--------------------------------------------------
+--Seleccionar la descripción y el precio 
+--de los productos que tengan un Stock entre 100 y 300 y
+--cuya descripción comience con 'Serie'
+
+SELECT Descripcion, Precio 
+FROM Productos 
+WHERE Descripcion LIKE 'Serie%' 
+  AND Stock BETWEEN 100 AND 300;
+
+--Seleccionar el Número de Pedido, la Cantidad y la 
+--Descripción del producto (Unión de Pedidos y Productos)
+
+SELECT p.Num_Pedido, p.Cantidad, pr.Descripcion 
+FROM Pedidos AS p
+INNER JOIN Productos AS pr 
+    ON p.Fab = pr.Id_fab 
+    AND p.Producto = pr.Id_producto;
+
+--Seleccionar el Número de Pedido, Empresa del cliente
+ --y Nombre del Representante (Triple Join con Importe > 15,000)
+
+SELECT p.Num_Pedido, c.Empresa, r.Nombre
+FROM Pedidos AS p
+INNER JOIN Clientes AS c 
+    ON p.Cliente = c.Num_Cli
+INNER JOIN Representantes AS r 
+    ON c.Rep_Cli = r.Num_Empl
+WHERE p.Importe > 15000;
+
+--Obtener el número de pedido, el importe y una columna calculada 
+--llamada 'IVA' (que sea el 16% del importe) de todos los pedidos 
+--realizados entre el 1 de enero de 1989 y el 31 de diciembre de 1989. 
+--Además, obtén el Gran Total (Importe + IVA)
+ --bajo el alias 'Total_Facturado'.
+
+ SELECT 
+    Num_Pedido, 
+    Importe,  
+    (Importe * 0.16) AS [IVA],
+    (Importe + (Importe * 0.16)) AS [Total_Facturado] 
+FROM Pedidos 
+WHERE Fecha_Pedido BETWEEN '1989-01-01' AND '1989-12-31';
+
+
