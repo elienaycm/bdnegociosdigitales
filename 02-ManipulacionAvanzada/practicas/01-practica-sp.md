@@ -184,3 +184,17 @@ SELECT * FROM CatProducto;
 ![Base de Datos para Negocios Digitales](/img/ultima1.png "BD.")
 
 ### 4. Commit
+```
+
+git add .
+
+git commit -m "Practica venta con StoreProcedure"
+
+git push origin practica-sp
+
+git checkout main
+
+git merge practica-sp
+
+git push origin main
+```
