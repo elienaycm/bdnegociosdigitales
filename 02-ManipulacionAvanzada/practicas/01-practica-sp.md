@@ -184,3 +184,6 @@ SELECT * FROM CatProducto;
 ![Base de Datos para Negocios Digitales](/img/ultima1.png "BD.")
 
 ### 4. Commit
+```
+git commit -m "Practica venta con StoreProcedure"
+```
