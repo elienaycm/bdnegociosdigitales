@@ -1,9 +1,4 @@
-USE NORTHWND;
-GO
 
-DROP DATABASE bdpracticas;
-GO
- 
  --1.
 CREATE DATABASE bdpracticas;
 GO
@@ -138,3 +133,5 @@ EXEC usp_agregar_venta 'ANATR', 1, 6;
 SELECT * FROM tblVenta;
 SELECT * FROM tblDetalleVenta;
 SELECT * FROM CatProducto;
+
+

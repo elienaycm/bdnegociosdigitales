@@ -185,6 +185,7 @@ SELECT * FROM CatProducto;
 
 ### 4. Commit
 ```
+<<<<<<< HEAD
 
 git add .
 
@@ -197,4 +198,7 @@ git checkout main
 git merge practica-sp
 
 git push origin main
+=======
+git commit -m "Practica venta con StoreProcedure"
+>>>>>>> practica-sp
 ```
